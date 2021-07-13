@@ -1,0 +1,19 @@
+.category-button-container {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 33px;
+    justify-content: space-around;
+    padding-left: 8px;
+    padding-right: 15px;
+}
+
+.category-button-text {
+    margin-left: 10px;
+}
+
+.category-button-selected {
+    border: 1px solid grey;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: none;
+}

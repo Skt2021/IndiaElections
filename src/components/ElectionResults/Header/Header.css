@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.image {
+  width: 100px;
+  height: 76px;
+  align-self: center;
+  margin:10px;
+}
+
+.stacked-bar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.nda {
+  font-weight: bold;
+  display: flex;
+  color: #FFA500;
+  justify-content: flex-start;
+}
+.upa {
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  color: #5BADD6;
+}
+.oth{
+  font-weight: bold;
+  color:#CCCCCC;
+}

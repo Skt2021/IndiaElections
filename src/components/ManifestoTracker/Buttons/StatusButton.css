@@ -1,0 +1,17 @@
+.status-button-container {
+    display: flex;
+    border: 1px solid grey;
+    align-items: center;
+    width: fit-content;
+    border-radius: 5px;
+    height: 33px;
+    justify-content: space-around;
+    margin-left: 7px;
+    padding-left: 8px;
+    padding-right: 15px;
+}
+
+.status-button-text {
+    margin-left: 10px;
+}
+

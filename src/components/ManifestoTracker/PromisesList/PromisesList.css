@@ -1,0 +1,57 @@
+.promises-list-container {
+    width: 100%;
+}
+
+.promises-table {
+    margin:auto;
+    width: 96%;
+}
+
+.promises-table-header{
+    display: flex;
+}
+
+.status-title {
+    margin-left: 50px;
+}
+
+.category-title {
+    margin-left: 25px;
+}
+
+.promise-title {
+    margin-left: 122px;
+}
+
+.promises-table-body{
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+}
+
+.index-body {
+    margin-left: 5px;
+}
+
+.status-body {
+    margin-left: 50px;
+}
+
+.category-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.promise-body-container {
+    position: absolute;
+    display: flex;
+    left: 350px;
+    width: 70%;
+    margin-left: 10px;
+}
+
+.promise-body {
+    
+}

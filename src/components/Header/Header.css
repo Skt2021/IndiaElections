@@ -1,0 +1,53 @@
+.header-container{
+    z-index: 100;
+    position: sticky;
+    top:0px;
+    width: 100%;
+    height: 72px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.brand-image{
+    width: 65px;
+    height: 50px;
+    background: black;
+}
+
+.brand {
+    color: #FFFFFF;
+}
+
+.nav-links-container{
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.signIn-button {
+    display: flex;
+    align-items: center;
+    background: white;
+    width: 135px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.google-logo {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+.signIn-text {
+    margin-left: 20px;
+    color: grey;
+    font-weight: bold;
+}

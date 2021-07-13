@@ -1,0 +1,27 @@
+.home-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-main-page {
+    height: 92vh;
+    width: 100vw;
+    display: flex;
+    background-image: url(../../assets/main-image.jpg);
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-container-main {
+    font-size: 24px;
+    margin: 10% 20% 0% 20%;
+    color: #FFFFFF;
+}
+
+.home-cards-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}

@@ -1,0 +1,20 @@
+.discuss-button {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 100px;
+    justify-content: space-around;
+    border: 1px solid rgba(255, 255, 255, 0.733);
+    background-color: hsla(185, 88%, 56%, 0.7);
+    border-radius: 5px;
+}
+
+.discuss-button-icon{
+    color: rgba(255, 255, 255, 0.733);
+}
+
+.discuss-button-text{
+    color: white;
+}

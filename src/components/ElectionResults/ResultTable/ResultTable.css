@@ -1,0 +1,15 @@
+.result-table table,td,th {
+  border: 1px solid black;
+}
+
+.result-table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  
+}
+
+.result-table {
+  border-collapse: collapse;
+  width: 50vw;
+}

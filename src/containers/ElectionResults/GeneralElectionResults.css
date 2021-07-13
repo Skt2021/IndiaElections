@@ -1,0 +1,16 @@
+.general-election-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-buttons-container {
+    display: flex;
+    width: 35%;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+.general-election-results-body-container{
+    display: flex;
+}

@@ -1,0 +1,14 @@
+.result-category-button-container {
+    background: grey;
+    width: fit-content;
+}
+
+
+.result-category-button-text {
+    color: #FFFFFF;
+    padding: 0px 15px 0px 8px;
+}
+
+.result-category-button-selected {
+    background: #000;
+}

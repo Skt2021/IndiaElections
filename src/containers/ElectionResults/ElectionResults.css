@@ -1,0 +1,68 @@
+.election-results-container{
+    margin: auto;
+    width: 80vw;
+}
+
+.live-news-container {
+    height: 30px;
+    text-align: start;
+}
+
+.live-news-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    width: 100px;
+    height: 100%;
+    background: #000;
+}
+
+.election-results-body-container {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.election-results-left-panel {
+    width: 23%;
+}
+
+.election-results-all-general-elections {
+    margin-top: 50px;
+    background: #98c6ca;
+}
+
+.election-results-all-general-header{
+    background: #264d59;
+    height: 4vh;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.election-results-all-general-elections-button-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid white;
+    color: #FFFFFF;
+}
+
+.election-results-all-general-elections-button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    margin: 5px;
+    background: none;
+    outline: none;
+    height: 30px;
+    color: #000;
+}
+
+.election-results-right-panel {
+    width: 70%;
+    margin-top: 100px;
+}
