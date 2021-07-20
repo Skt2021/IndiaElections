@@ -1,13 +1,15 @@
 import firebase from "firebase";
 
+console.log(process.env)
+
 const config = {
-    apiKey: "AIzaSyBhx-holxxegiN3JHuE18jtynT4gs2qo0Y",
-    authDomain: "indiaelections-2021.firebaseapp.com",
-    projectId: "indiaelections-2021",
-    storageBucket: "indiaelections-2021.appspot.com",
-    messagingSenderId: "911593136723",
-    appId: "1:911593136723:web:813ca25907441e099adca6",
-    measurementId: "G-71L1MQFBSB"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
+    measurementId: process.env.REACT_APP_MEASUREMENT_ID,
   };
 
   firebase.initializeApp(config);
