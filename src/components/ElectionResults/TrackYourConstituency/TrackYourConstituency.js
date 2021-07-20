@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{useState} from 'react';
 import "./TrackYourConstituency.css";
 
 function TrackYourConstituency(props) {
+
     return (
         <div className="track-your-constituency-container">
             <div className="track-your-constituency-header">
@@ -13,16 +14,17 @@ function TrackYourConstituency(props) {
                     <option>Parliamentary Constituency</option>
                     <option>Assembly Constituency</option>
                 </select>
+                <form className="track-your-constituency-option" >
                 <select className="track-your-constituency-option">
                     <option>Select State</option>
-                    {
+                    {   
                         props.states.map((state)=>{
                             return <option>{state}</option>
                         })
                     }
                 </select>
-                <select className="track-your-constituency-option">
-                    <option>Select Constituency</option>
+                </form>
+                <select className="track-your-constituency-option" >
                 </select>
                 <button>Search</button>
             </div>

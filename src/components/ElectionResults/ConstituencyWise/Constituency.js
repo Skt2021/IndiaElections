@@ -1,22 +1,25 @@
 import React,{useState,useEffect} from 'react';
 import ConstituencyDetails from './ConstituencyDetails';
-import {ConstituencyData,ConstituencyList} from '../../../assets/Data/constituencyData';
 
-function Constituency(){
-const [currentConstituency,setCurrentConstituency] = useState("ARUNACHAL EAST");
+function Constituency({resultData,loading}){
+const [currentConstituency,setCurrentConstituency] = useState("ANDAMAN & NICOBAR ISLANDS");
 const [currentConstituencyDetails,setCurrentConstituencyDetails] = useState([]);
 
 useEffect(()=>{
+    if (!loading){
     let Data = [];
-    Object.keys(ConstituencyData).map(function(key,index){
-        ConstituencyData[key].map( element => {
-             if(element["Constituency"] === currentConstituency){
-                 Data.push(element);
-             }
-     })
+    var stateName;
+    Object.keys(resultData).map(state => {
+        Data = Object.keys(resultData[state]).filter(constituency=>{
+            return constituency === currentConstituency.toUpperCase()
+        })
+        if(Data.length===1){
+            stateName = state
+        }
+
  })
- setCurrentConstituencyDetails(Data);
-},[currentConstituency]);
+ setCurrentConstituencyDetails(resultData[stateName][currentConstituency.toUpperCase()]);}
+},[currentConstituency,loading]);
 
 const handleChange = (e) => {
     setCurrentConstituency(e.target.value);
@@ -28,17 +31,20 @@ const handleChange = (e) => {
                 <form onChange={handleChange}>
                     <label>Search your Constituency</label>
                     <select>
-                        {
-                            ConstituencyList.map(constituency => {
-                                return <option>{constituency}</option>
-                            })
+                        {   
+                            Object.keys(resultData).map(state => {
+                                return Object.keys(resultData[state]).map(constituency=>{
+                                    return <option>{constituency}</option>
+                                })
+                         })
                         }
                     </select>
                 </form>
             </div>
             <div>
-                 
-                <ConstituencyDetails CC={currentConstituency} CCDetails={currentConstituencyDetails}/>
+            {
+                loading ? "":<ConstituencyDetails CC={currentConstituency} CCDetails={currentConstituencyDetails}/>
+            }
             </div>
         </div>
     );

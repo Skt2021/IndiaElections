@@ -1,16 +1,20 @@
-export const states = [ "Andhra Pradesh",
+export const states = [
+                "Andaman & Nicobar Islands",
+                "Andhra Pradesh",
                 "Arunachal Pradesh",
                 "Assam",
                 "Bihar",
+                "Chandigarh",
                 "Chhattisgarh",
                 "Goa",
                 "Gujarat",
                 "Haryana",
                 "Himachal Pradesh",
-                "Jammu and Kashmir",
+                "Jammu & Kashmir",
                 "Jharkhand",
                 "Karnataka",
                 "Kerala",
+                "Lakshadweep",
                 "Madhya Pradesh",
                 "Maharashtra",
                 "Manipur",
@@ -28,6 +32,8 @@ export const states = [ "Andhra Pradesh",
                 "Uttar Pradesh",
                 "West Bengal",
                 "Delhi",
-                "Puducherry"];
+                "Puducherry",
+                "Dadra & Nagar Haveli"
+            ];
 
 export const years = ["2019", "2014", "2009", "2004", "1999", "1998", "1996", "1991", "1989", "1984", "1980", "1977", "1971", "1967", "1962", "1957", "1952"];

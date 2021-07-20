@@ -22,7 +22,6 @@ function PieChart(){
     })
 
     useEffect(()=>{
-        console.log(color);
         const ctx1 = document.getElementById("seatChart");
         new Chart(ctx1, {
             type: "pie",

@@ -3,11 +3,11 @@ import { ls_map_data, state_map_data } from "../../../assets/Data/LokSabha_MapDa
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import Tooltip from "./Tooltip";
-import { ConstituencyData,ConstituencyList } from "../../../assets/Data/constituencyData";
 import { Politicalparties } from "../../../assets/Data/data";
 import { Abbre } from "../../../assets/Data/LSMapAbbreveations";
 
-const LokSabhaMap = () => {
+const LokSabhaMap = ({resultData,loading}) => {
+
   return (
     <>
       <svg _ngcontent-c6="" id="map-container" height="1051px" width="740px" viewBox="0 0 650 650">
@@ -23,30 +23,37 @@ const LokSabhaMap = () => {
                 if(state[0]==="U04"){
                   return 0
                 }
-                const array = ConstituencyData[Abbre[state[0]]]
+                const data = resultData[Abbre[state[0]]]
                 return state[1].map((cons) => {
-                  const result = array.filter((ele)=>{
-                    
-                    return ele.Constituency.toLowerCase() === Object.keys(cons)[0].toLowerCase()
-                  })
-                  const details =  result.sort(function (a, b) {
-                    return b["Total Votes"] - a["Total Votes"];
-                    })
-                  if(typeof(details[0]) === "object"){
-                    var winner = Politicalparties.filter((party)=>{
-                      return details[0].Party === party.Party
-                    })
-                  }
-                  if(typeof(winner)==="object" && winner.length>0){
-                    console.log(winner)
-                    var color = winner[0].Color;
+                  if(Abbre[state[0]] in resultData){
+                    if(Object.keys(cons)[0].toUpperCase() in data){
+                      var results = data[Object.keys(cons)[0].toUpperCase()][Object.keys(cons)[0].toUpperCase()][0]
+                      const winningParty = results["Party"]
+                      const winningPartyDetails = Politicalparties.filter(element=>{
+                        return element.Abbreviation === winningParty
+                      })
+                      if(winningPartyDetails[0]){
+                        var color = winningPartyDetails[0]["Color"]
+                      }
+                      else{
+                        console.log(winningParty)
+                      }
+                    }
+                    else{
+                        //console.log(Object.keys(cons)[0].toUpperCase())
+                        color = "white";
+                    }
                   }
                   else{
-                    color = "white"
+                      console.log(Abbre[state[0]])
+                      color = "white";
                   }
+
+
                   return (
-                    <Tippy content={<Tooltip id={Object.entries(cons)[0][0]} />} >
+                    <Tippy key={Object.keys(cons)[0]} content={<Tooltip id={Object.entries(cons)[0][0]} data={results} />} >
                     <path
+                      key={Object.keys(cons)[0]}
                       className="S02-1"
                       d={Object.entries(cons)[0][1]}
                       stroke="black"
@@ -63,6 +70,7 @@ const LokSabhaMap = () => {
               {
                   state_map_data.map((state)=>{
                       return <path
+                      key={Object.entries(state)[0]}
                       className="S02-1"
                       d={Object.entries(state)[0][1]}
                       stroke="black"

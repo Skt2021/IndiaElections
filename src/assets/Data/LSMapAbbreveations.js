@@ -8,7 +8,7 @@ export const Abbre = {
                 "S06":"Gujarat",
                 "S07":"Haryana",
                 "S08":"Himachal Pradesh",
-                "S09":"Jammu and Kashmir",
+                "S09":"Jammu & Kashmir",
                 "S27":"Jharkhand",
                 "S10":"Karnataka",
                 "S11":"Kerala",
@@ -30,9 +30,9 @@ export const Abbre = {
                 "S25":"West Bengal",
                 "U05":"Delhi",
                 "U07":"Puducherry",
-                "U01":"Andaman and Nicobar Islands",
+                "U01":"Andaman & Nicobar Islands",
                 "U02":"Chandigarh",
                 "U04":"Daman and Diu",
                 "U06":"Lakshadweep",
-                "U03":"Dadra and Nagar Haveli"
+                "U03":"Dadra & Nagar Haveli"
 }

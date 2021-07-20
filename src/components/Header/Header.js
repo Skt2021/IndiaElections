@@ -7,7 +7,7 @@ import NavItem from './NavItem';
 function Header() {
     const [active, setActive] = useState();
     const list = ["Election Results","Electoral Trends","Manifesto Tracker"]
-    const links = ["/election-results","electoral-trends","/governments"]
+    const links = ["/election-results","/electoral-trends","/governments"]
     const history = useHistory()
     const onClickHandler = (id) => {
         setActive(id);
